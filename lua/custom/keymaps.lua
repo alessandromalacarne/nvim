@@ -25,10 +25,10 @@ vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
 vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tms<CR>')
 
 -- Fugitive
-vim.keymap.set('n', '<leader>gg', ':Git<CR>')
+vim.keymap.set('n', '<leader>gs', ':Git<CR>')
 vim.keymap.set('n', '<leader>gp', ':Git push<CR>')
-vim.keymap.set('n', '<leader>gP', ':Git pull --rebase<CR>')
-vim.keymap.set('n', '<leader>gd', ':Git diff<CR>')
+vim.keymap.set('n', '<leader>gP', ':Git pull<CR>')
+vim.keymap.set('n', '<leader>gd', ':Git difftool<CR>')
 vim.keymap.set('n', '<leader>gl', ':Git log<CR>')
 
 -- CodeCompanion
