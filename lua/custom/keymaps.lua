@@ -1,5 +1,5 @@
--- remembering old days
-vim.keymap.set('n', '<leader>pv', ':Ex<CR>')
+-- rip netrw
+vim.keymap.set('n', '<leader>pv', ':Oil<CR>')
 
 -- delete without yanking
 vim.keymap.set('x', '<leader>P', [["_dP]])
