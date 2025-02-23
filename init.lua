@@ -680,6 +680,7 @@ require('lazy').setup({
             },
           },
         },
+
         eslint = {
           on_attach = function(client, bufnr)
             vim.api.nvim_create_autocmd('BufWritePre', {
@@ -687,6 +688,28 @@ require('lazy').setup({
               command = 'EslintFixAll',
             })
           end,
+        },
+
+        tailwindcss = {
+          filetypes = {
+            'css',
+            'scss',
+            'sass',
+            'postcss',
+            'html',
+            'javascript',
+            'javascriptreact',
+            'typescript',
+            'typescriptreact',
+            'svelte',
+            'vue',
+            'rust',
+          },
+          init_options = {
+            userLanguages = {
+              rust = 'html',
+            },
+          },
         },
       }
 
@@ -720,27 +743,6 @@ require('lazy').setup({
             -- certain features of an LSP (for example, turning off formatting for ts_ls)
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
             require('lspconfig')[server_name].setup(server)
-            require('lspconfig').tailwindcss.setup {
-              filetypes = {
-                'css',
-                'scss',
-                'sass',
-                'postcss',
-                'html',
-                'javascript',
-                'javascriptreact',
-                'typescript',
-                'typescriptreact',
-                'svelte',
-                'vue',
-                'rust',
-              },
-              init_options = {
-                userLanguages = {
-                  rust = 'html',
-                },
-              },
-            }
           end,
         },
       }
