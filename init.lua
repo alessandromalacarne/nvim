@@ -647,6 +647,10 @@ require('lazy').setup({
         -- ts_ls = {},
         --
 
+        vue_ls = {
+          filetypes = { 'vue' },
+        },
+
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
