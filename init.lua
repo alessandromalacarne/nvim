@@ -675,14 +675,17 @@ require('lazy').setup({
           end,
         },
 
-        rust_analyzer = {
-          settings = {
-            ['rust-analyzer'] = {
-              procMacro = { enable = true },
-            },
-          },
-        },
-
+        -- rust_analyzer = {
+        --   settings = {
+        --     ['rust-analyzer'] = {
+        --       procMacro = { enable = true },
+        --       checkOnSave = {
+        --         allTargets = true,
+        --       },
+        --     },
+        --   },
+        -- },
+        --
         tailwindcss = {
           filetypes = {
             'css',
